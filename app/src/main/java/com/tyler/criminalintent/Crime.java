@@ -1,22 +1,24 @@
 package com.tyler.criminalintent;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
-/**
- * Created by tylercaldwell on 2/26/18.
- */
 
 public class Crime {
 
     private UUID mId;
     private String mTitle;
-    private Date mDate;
+    private String mDate;
     private boolean mSolved;
 
     public Crime() {
         mId = UUID.randomUUID();
-        mDate = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMM dd, yyyy.", Locale.US);
+        mDate = sdf.format(new Date());
+
     }
 
     public UUID getId() {
@@ -31,12 +33,13 @@ public class Crime {
         mTitle = title;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return mDate;
     }
 
     public void setDate(Date date) {
-        mDate = date;
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMM dd, yyyy.", Locale.US);
+        mDate = sdf.format(date);
     }
 
     public boolean isSolved() {

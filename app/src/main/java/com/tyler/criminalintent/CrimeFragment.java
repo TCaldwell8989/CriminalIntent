@@ -2,7 +2,6 @@ package com.tyler.criminalintent;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,9 +14,6 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 
-/**
- * Created by tylercaldwell on 2/26/18.
- */
 
 public class CrimeFragment extends Fragment {
     private Crime mCrime;
@@ -53,6 +49,8 @@ public class CrimeFragment extends Fragment {
                 //intentionally blank
             }
         });
+
+
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
         mDateButton.setText(mCrime.getDate().toString());
