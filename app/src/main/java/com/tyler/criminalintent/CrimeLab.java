@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+//CrimeLab is a singleton class allowing the list of crimes to
+// exist while CriminalIntent is in memory
 public class CrimeLab {
     private static CrimeLab sCrimeLab;
 

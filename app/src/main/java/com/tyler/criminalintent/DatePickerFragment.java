@@ -15,6 +15,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+//Dialog displaying a DatePicker presenting a user
+// with a choice of Date for the crime
 public class DatePickerFragment extends DialogFragment {
 
     public static final String EXTRA_DATE =

@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+//CrimeListFragment is a controller. Presents a list of crimes
+// and each crime's details that a user can select and modify.
 public class CrimeListFragment extends Fragment {
 
     private static final int REQUEST_CRIME = 1;

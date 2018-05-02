@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.List;
 import java.util.UUID;
 
+//ViewPager allowing users to navigate between crimes by
+// swiping across the screen to "page" forward or backward.
 public class CrimePagerActivity extends AppCompatActivity {
 
     private static final String EXTRA_CRIME_ID =

@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
 
-
+// Model Layer for CriminalIntent
 public class Crime {
 
     private UUID mId;

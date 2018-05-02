@@ -22,7 +22,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
 
-
+// CrimeFragment is a controller. Presents the details of
+// a specific crime and can update those details per user.
 public class CrimeFragment extends Fragment {
 
     private static final String ARG_CRIME_ID = "crime_id";
@@ -76,7 +77,7 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = (Button) v.findViewById(R.id.crime_date);
-        updateDate();
+        updateDateButton();
         mDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,6 +101,7 @@ public class CrimeFragment extends Fragment {
         return v;
     }
 
+    //Update crime's date to date user picked with DatePicker
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK) {
@@ -110,12 +112,12 @@ public class CrimeFragment extends Fragment {
             Date date = (Date) data
                     .getSerializableExtra(DatePickerFragment.EXTRA_DATE);
             mCrime.setDate(date);
-            updateDate();
+            updateDateButton();
         }
     }
 
-    private void updateDate() {
-
+    //Format the Date to display Weekday, Month Day, Year
+    private void updateDateButton() {
         SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM dd, yyyy", Locale.US);
         mDateButton.setText(sdf.format(mCrime.getDate()));
     }
