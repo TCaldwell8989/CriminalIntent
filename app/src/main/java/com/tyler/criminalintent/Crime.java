@@ -11,13 +11,12 @@ public class Crime {
 
     private UUID mId;
     private String mTitle;
-    private String mDate;
+    private Date mDate;
     private boolean mSolved;
 
     public Crime() {
         mId = UUID.randomUUID();
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMM dd, yyyy.", Locale.US);
-        mDate = sdf.format(new Date());
+        mDate = new Date();
 
     }
 
@@ -33,13 +32,12 @@ public class Crime {
         mTitle = title;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return mDate;
     }
 
     public void setDate(Date date) {
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMM dd, yyyy.", Locale.US);
-        mDate = sdf.format(date);
+        mDate = date;
     }
 
     public boolean isSolved() {
